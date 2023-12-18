@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Center</title>
+        <!-- BOOTSTRAP STYLES-->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+        <!-- FONTAWESOME STYLES-->
+        <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}" />
+        <!-- MORRIS CHART STYLES-->
+        <link rel="stylesheet" href="{% static 'js/morris/morris-0.4.3.min.css' %}" />
+        <!-- CUSTOM STYLES-->
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
+        <!-- GOOGLE FONTS-->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans" type="text/css" />
+        <!-- Latest compiled and minified CSS -->
+
+
+<!-- Latest compiled and minified JavaScript -->
+    </head>
+  <style></style>
+
+  <body>
+    <div id="wrapper">
+      <nav
+        class="navbar navbar-default navbar-cls-top"
+        style="margin-bottom: 0px"
+        role="navigation">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".sidebar-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a
+            class="navbar-brand"
+            href="?page=s"
+            style="background-color: #428bca"
+            >Tripoli Center</a
+          >
+        </div>
+        <div
+          style="
+            color: white;
+            padding: 15px 50px 5px 50px;
+            float: right;
+            font-size: 16px;
+          "
+        >
+          Last access : 30 May 2014 &nbsp;
+          <a
+            href="./index.php?page=logout"
+            class="btn btn-danger square-btn-adjust"
+            style="background-color: #428bca"
+            >Logout</a
+          >
+        </div>
+      </nav>
+      <nav class="navbar-default navbar-side" role="navigation">
+        <div class="sidebar-collapse">
+          <ul class="nav" id="main-menu">
+            <li class="text-center">
+              <img
+                src="{% static 'img/find_user.png' %}"
+                class="user-image img-responsive"
+              />
+              <span style="color: beige">welcome<br /></span>
+            </li>
+
+            <li>
+              <a href="./index.php?page=students"
+                ><i class="fa fa-table fa-3x"></i>students</a
+              >
+            </li>
+
+            <li>
+              <a href="./index.php?page=classes"
+                ><i class="fa fa-table fa-3x"></i>Classes</a
+              >
+            </li>
+
+            <li>
+              <a href="./index.php?page=teachers"
+                ><i class="fa fa-table fa-3x"></i>teachers</a
+              >
+            </li>
+            <li>
+              <a href="./index.php?page=languages"
+                ><i class="fa fa-table fa-3x"></i>languges</a
+              >
+            </li>
+
+            <li>
+              <a href="./index.php?page=logout"
+                ><i class="fa fa-table fa-3x"></i>logout</a
+              >
+            </li>
+
+        
+          </ul>
+        </div>
+      </nav>
+      <div id="page-wrapper">
+
+
+
+        {% block content %}
+
+
+        {% endblock content %}
+
+      </div>
+    </div>
+
+    <script src="{% static 'js/jquery-1.10.2.js' %}"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="{% static 'js/jquery.metisMenu.js' %}"></script>
+    <!-- MORRIS CHART SCRIPTS -->
+    <script src="{% static 'js/morris/raphael-2.1.0.min.js' %}"></script>
+    <script src="{% static 'js/morris/morris.js' %}"></script>
+    <!-- CUSTOM SCRIPTS -->
+
+
+    <script src="{% static 'js/custom.js' %}"></script>
+  </body>
+</html>

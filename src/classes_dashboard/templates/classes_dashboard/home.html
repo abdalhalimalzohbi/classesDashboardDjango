@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <div class="row" id="data">
+    {% for abd in "123456" %}
+    <div class="col-md-4 class_div" style="background-color: gray">
+      Name: AUDI-1
+      <p>capacity: 75</p>
+      <p>you should take: 1125$</p>
+      <button id="14" class="btn btn-danger">delete</button>
+      <span>&nbsp;&nbsp;</span>
+      <button id="14"class="btn btn-primary">edit</button>
+    <span>&nbsp;&nbsp;</span>
+    <button id="14" class="btn btn-primary" >
+        show
+      </button>
+    </div>
+  {% endfor %}
+
+
+  </div>
+</div>
+<style>
+    .class_div {
+      padding: 15px;
+      background: #80808069;
+      border-radius: 15px;
+      color: black;
+      margin: 5px;
+    }
+  
+    .col-md-4 {
+      width: 32.4%;
+    }
+  </style>
+
+{% endblock content %}
